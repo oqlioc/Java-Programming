@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="838.0" prefWidth="776.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FoodController">
+   <children>
+      <VBox layoutX="4.0" layoutY="1.0" prefHeight="838.0" prefWidth="776.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #B4E5FF;">
+               <children>
+                  <VBox prefHeight="97.0" prefWidth="776.0">
+                     <children>
+                        <MenuBar style="-fx-background-color: #B4E5FF;">
+                           <menus>
+                              <Menu mnemonicParsing="false" style="-fx-background-color: #B4E5FF;" text="홈" />
+                              <Menu mnemonicParsing="false">
+                                 <graphic>
+                                    <Hyperlink onAction="#github4" text="깃허브" />
+                                 </graphic>
+                              </Menu>
+                              <Menu mnemonicParsing="false" onAction="#naver4">
+                                 <graphic>
+                                    <Hyperlink onAction="#naver4" text="BIT카페" />
+                                 </graphic>
+                              </Menu>
+                           </menus>
+                        </MenuBar>
+                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="698.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#home4" prefHeight="55.0" prefWidth="77.0" style="-fx-background-color: #B4E5FF;">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/KakaoTalk_20181009_013614682.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#calpage11" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: #B4E5FF;">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/cal4.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#albumpage11" prefHeight="47.0" prefWidth="65.0" style="-fx-background-color: #B4E5FF;">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/Al.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#game4" prefHeight="51.0" prefWidth="54.0" style="-fx-background-color: #B4E5FF;">
+                                 <graphic>
+                                    <ImageView pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/KakaoTalk_20181009_013444087.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="265.0" prefWidth="776.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fx:id="image1" fitHeight="260.0" fitWidth="305.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/엽떡.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="361.0" prefWidth="776.0">
+               <children>
+                  <TableView fx:id="postScriptTable" layoutX="14.0" layoutY="14.0" prefHeight="361.0" prefWidth="776.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="nameColumn" prefWidth="119.0" text="작성자" />
+                      <TableColumn fx:id="postScriptColumn" prefWidth="560.0" text="후기" />
+                        <TableColumn fx:id="scoreColumn" prefWidth="96.0" text="평점" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+            <AnchorPane prefHeight="94.0" prefWidth="776.0" style="-fx-background-color: #B4E5FF;">
+               <children>
+                  <TextField fx:id="name" layoutX="26.0" layoutY="25.0" prefHeight="29.0" prefWidth="100.0" promptText="작성자" />
+                  <TextField fx:id="post" layoutX="148.0" layoutY="25.0" prefHeight="29.0" prefWidth="512.0" promptText="후기를 입력해주세요" />
+                  <Button fx:id="confirm" layoutX="660.0" layoutY="40.0" mnemonicParsing="false" onAction="#insertPostScript" text="Confirm" />
+                  <Button fx:id="postScript" layoutX="586.0" layoutY="55.0" mnemonicParsing="false" onAction="#searchFoods" text="Reflush" />
+                  <MenuButton layoutX="660.0" layoutY="11.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="79.0" text="평점">
+                    <items>
+                      <MenuItem fx:id="score1" mnemonicParsing="false" onAction="#setScore1" text="＊" />
+                      <MenuItem fx:id="score2" mnemonicParsing="false" onAction="#setScore2" text="＊＊" />
+                        <MenuItem fx:id="score3" mnemonicParsing="false" onAction="#setScore3" text="＊＊＊" />
+                        <MenuItem fx:id="score4" mnemonicParsing="false" onAction="#setScore4" text="＊＊＊＊" />
+                        <MenuItem fx:id="score5" mnemonicParsing="false" onAction="#setScore5" text="＊＊＊＊＊" />
+                    </items>
+                  </MenuButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author kjw
+ *
+ */
+module DesignStatePattern {
+}
